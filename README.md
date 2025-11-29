@@ -1,5 +1,13 @@
 # Database Systems
 
+## Environment Setup
+1. เข้า `Environment Variables`
+2. กด Edit Path ในส่วนของ System variables
+3. เพิ่ม path ของ MySQL เช่น `C:\Program Files\MySQL\MySQL Server 8.0\bin`
+4. กด OK เพื่อบันทึกการเปลี่ยนแปลง
+
+สามารถเรียกใชงาน `mysql -u root -p` ได้จาก Command Prompt
+
 ## Change Password
 
 1. ปิด MySQL Service
