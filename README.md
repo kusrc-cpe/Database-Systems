@@ -1,5 +1,9 @@
 # Database Systems
 
+## Tutorial
+- https://www.w3schools.com/MySQL
+- https://www.tutorialspoint.com/mysql
+
 ## Environment Setup
 1. เข้า `Environment Variables`
 2. กด Edit Path ในส่วนของ System variables
