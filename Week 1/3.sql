@@ -1,6 +1,8 @@
-CREATE DATABASE `employee`;
+CREATE DATABASE `Employee`;
 
-CREATE TABLE `assignment` (
+use `Employee`;
+
+CREATE TABLE `Assignment` (
     `Client_ID` INT NOT NULL,
     `Employee_ID` INT NOT NULL,
     `Work_Date` DATE NOT NULL,
@@ -8,7 +10,7 @@ CREATE TABLE `assignment` (
     PRIMARY KEY (`Client_ID`, `Employee_ID`, `Work_Date`)
 );
 
-CREATE TABLE `client` (
+CREATE TABLE `Client` (
     `Client_ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `Name` VARCHAR(40) DEFAULT NULL,
     `Address` VARCHAR(100) DEFAULT NULL,
@@ -16,12 +18,12 @@ CREATE TABLE `client` (
     `Contact_Number` CHAR(12) DEFAULT NULL
 );
 
-CREATE TABLE `department` (
-    `DepartmentID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE `Department` (
+    `Department_ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `Name` VARCHAR(30) DEFAULT NULL
 );
 
-CREATE TABLE `employee` (
+CREATE TABLE `Employee` (
     `Employee_ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `Name` VARCHAR(80) DEFAULT NULL,
     `Job` VARCHAR(30) DEFAULT NULL,
@@ -29,9 +31,8 @@ CREATE TABLE `employee` (
     `Department_ID` INT NOT NULL
 );
 
-CREATE TABLE `employee_skill` (
+CREATE TABLE `Employee_Skill` (
     `Employee_ID` INT NOT NULL,
     `Skill` VARCHAR(15) NOT NULL,
     PRIMARY KEY (`Employee_ID`, `Skill`)
 );
-
