@@ -1,3 +1,5 @@
+CREATE DATABASE `employee`;
+
 CREATE TABLE `assignment` (
     `Client_ID` INT NOT NULL,
     `Employee_ID` INT NOT NULL,
@@ -32,3 +34,4 @@ CREATE TABLE `employee_skill` (
     `Skill` VARCHAR(15) NOT NULL,
     PRIMARY KEY (`Employee_ID`, `Skill`)
 );
+
