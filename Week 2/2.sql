@@ -1,6 +1,5 @@
 UPDATE Employee SET Department_ID = 128 WHERE Employee_ID = 3333;
 DELETE FROM Employee WHERE Employee_ID = 4442;
-UPDATE Employee SET Salary = 12000 WHERE Employee_ID = 4444;
 UPDATE Employee SET Salary = 20000 WHERE Employee_ID = 4445;
 
 UPDATE Department SET Name = "Research and Development" WHERE Department_ID = 128;
