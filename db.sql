@@ -45,7 +45,7 @@ INSERT INTO `Client` (`Client_ID`, `Name`, `Address`, `Contact_Person`, `Contact
     (1, 'ABC Company Limited', '1 Silom Rd.', 'Vera', '02-95555123'),
     (2, 'Imperial Industry', '100 Samutprakran', 'Mongkol', '02-9555985');
 
-INSERT INTO `department` (`Department_ID`, `Name`) VALUES
+INSERT INTO `Department` (`Department_ID`, `Name`) VALUES
     (42, 'Finance'),
     (128, 'Research and Development'),
     (130, 'Marketing');
