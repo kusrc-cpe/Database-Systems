@@ -17,6 +17,7 @@ SELECT Employee_ID, COUNT(Skill) AS Number_of_Skills FROM Employee_Skill GROUP B
 -- 9
 SELECT Salary, Name AS Employee_Name FROM Employee ORDER BY Name;
 -- 10
-SELECT Name, Job, Salary FROM Employee ORDER BY Job DESC, Salary DESC, Name DESC;
+SELECT Name, Job, Salary FROM Employee ORDER BY Job DESC, Name DESC;
 -- 11
 SELECT Employee_ID, Skill FROM Employee_Skill WHERE Skill IN ("NT", "Linux", "JSP", "Java", "DB2","C") ORDER BY Skill DESC, Employee_ID DESC;
+
