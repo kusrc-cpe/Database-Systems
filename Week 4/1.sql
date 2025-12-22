@@ -19,5 +19,4 @@ SELECT Salary, Name AS Employee_Name FROM Employee ORDER BY Name;
 -- 10
 SELECT Name, Job, Salary FROM Employee ORDER BY Job DESC, Name DESC;
 -- 11
-SELECT Employee_ID, Skill FROM Employee_Skill WHERE Skill IN ("NT", "Linux", "JSP", "Java", "DB2","C") ORDER BY Skill DESC, Employee_ID DESC;
-
+SELECT Employee_ID, Skill FROM Employee_Skill WHERE Skill IN ("NT", "Linux", "JSP", "Java", "DB2", "C") ORDER BY Skill DESC, Employee_ID DESC;
