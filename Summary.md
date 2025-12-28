@@ -5,6 +5,7 @@
 - [Database Management](#database-management)
   - [Create Database](#create-database)
   - [Use Database](#use-database)
+  - [Drop Database](#drop-database)
   - [Import/Export SQL Files](#importexport-sql-files)
 - [Basic CRUD](#basic-crud)
   - [Insert Record](#insert-record)
@@ -56,6 +57,24 @@ USE database_name;
 ```sql
 USE company_db;
 ```
+
+---
+
+### Drop Database
+
+ลบฐานข้อมูล
+
+```sql
+DROP DATABASE database_name;
+```
+
+ตัวอย่าง
+
+```sql
+DROP DATABASE company_db;
+```
+
+> ⚠️ **คำเตือน:** การลบฐานข้อมูลจะลบข้อมูลทั้งหมดและไม่สามารถกู้คืนได้
 
 ---
 
@@ -133,6 +152,18 @@ FROM table_name;
 SELECT * FROM employees;
 ```
 
+ดึงข้อมูลที่ไม่ซ้ำกัน (DISTINCT)
+
+```sql
+SELECT DISTINCT column_name FROM table_name;
+```
+
+ตัวอย่าง
+
+```sql
+SELECT DISTINCT position FROM employees;
+```
+
 ---
 
 ### Update Record
@@ -208,6 +239,20 @@ WHERE salary >= 30000;
 ```sql
 SELECT * FROM employees
 WHERE name LIKE 'J%';
+```
+
+ใช้ IN (ตรวจสอบค่าในชุด)
+
+```sql
+SELECT * FROM employees
+WHERE position IN ('Developer', 'Manager', 'Designer');
+```
+
+ใช้ BETWEEN (ตรวจสอบค่าในช่วง)
+
+```sql
+SELECT * FROM employees
+WHERE salary BETWEEN 30000 AND 50000;
 ```
 
 ---
