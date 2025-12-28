@@ -6,7 +6,6 @@
   - [Create Database](#create-database)
   - [Use Database](#use-database)
   - [Drop Database](#drop-database)
-  - [Import/Export SQL Files](#importexport-sql-files)
 - [Basic CRUD](#basic-crud)
   - [Insert Record](#insert-record)
   - [Read Record](#read-record)
@@ -75,38 +74,6 @@ DROP DATABASE company_db;
 ```
 
 > ⚠️ **คำเตือน:** การลบฐานข้อมูลจะลบข้อมูลทั้งหมดและไม่สามารถกู้คืนได้
-
----
-
-### Import/Export SQL Files
-
-#### Export ฐานข้อมูลเป็นไฟล์ .sql
-
-ใช้ Command Line (mysqldump)
-
-```bash
-mysqldump -u username -p database_name > output_file.sql
-```
-
-ตัวอย่าง
-
-```bash
-mysqldump -u root -p company_db > company_backup.sql
-```
-
-#### Import ไฟล์ .sql เข้าฐานข้อมูล
-
-ใช้ Command Line
-
-```bash
-mysql -u username -p database_name < input_file.sql
-```
-
-ตัวอย่าง
-
-```bash
-mysql -u root -p company_db < company_backup.sql
-```
 
 ---
 
@@ -376,5 +343,3 @@ MODIFY salary FLOAT;
 ALTER TABLE employees
 RENAME COLUMN salary TO monthly_salary;
 ```
-
----
