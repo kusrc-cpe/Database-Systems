@@ -13,6 +13,7 @@
   - [Delete Record](#delete-record)
 - [Select with Condition](#select-with-condition)
   - [Operators](#operators)
+  - [Logical Operators](#logical-operators)
   - [Order By](#order-by)
   - [Limit](#limit)
   - [Group By](#group-by)
@@ -221,6 +222,107 @@ WHERE position IN ('Developer', 'Manager', 'Designer');
 SELECT * FROM employees
 WHERE salary BETWEEN 30000 AND 50000;
 ```
+
+---
+
+### Logical Operators
+
+ใช้เชื่อมเงื่อนไขหลายๆ เงื่อนไขเข้าด้วยกัน
+
+| Operator | ความหมาย                          |
+| -------- | --------------------------------- |
+| AND      | เงื่อนไขทั้งหมดต้องเป็นจริง           |
+| OR       | เงื่อนไขใดเงื่อนไขหนึ่งเป็นจริง       |
+| NOT      | กลับค่าความจริงของเงื่อนไข             |
+
+#### AND
+
+เงื่อนไขทั้งหมดต้องเป็นจริง
+
+```sql
+SELECT * FROM employees
+WHERE salary > 30000 AND position = 'Developer';
+```
+
+ตัวอย่างหลายเงื่อนไข
+
+```sql
+SELECT * FROM employees
+WHERE salary BETWEEN 30000 AND 50000
+  AND position = 'Developer'
+  AND name LIKE 'J%';
+```
+
+---
+
+#### OR
+
+เงื่อนไขใดเงื่อนไขหนึ่งเป็นจริง
+
+```sql
+SELECT * FROM employees
+WHERE position = 'Developer' OR position = 'Designer';
+```
+
+ตัวอย่างผสมกับ AND (ใช้วงเล็บเพื่อกำหนดลำดับการทำงาน)
+
+```sql
+SELECT * FROM employees
+WHERE (position = 'Developer' OR position = 'Designer')
+  AND salary > 35000;
+```
+
+---
+
+#### NOT
+
+กลับค่าความจริงของเงื่อนไข
+
+```sql
+SELECT * FROM employees
+WHERE NOT position = 'Manager';
+```
+
+ใช้กับ IN
+
+```sql
+SELECT * FROM employees
+WHERE position NOT IN ('Manager', 'CEO');
+```
+
+ใช้กับ BETWEEN
+
+```sql
+SELECT * FROM employees
+WHERE salary NOT BETWEEN 30000 AND 40000;
+```
+
+ใช้กับ LIKE
+
+```sql
+SELECT * FROM employees
+WHERE name NOT LIKE 'J%';
+```
+
+ใช้กับ NULL
+
+```sql
+SELECT * FROM employees
+WHERE email IS NOT NULL;
+```
+
+---
+
+#### ผสม AND, OR, NOT
+
+```sql
+SELECT * FROM employees
+WHERE (position = 'Developer' OR position = 'Designer')
+  AND salary > 30000
+  AND NOT name LIKE 'A%';
+```
+
+> 💡 **Tips:** ใช้วงเล็บ `()` เพื่อกำหนดลำดับการทำงานของเงื่อนไขให้ชัดเจน
 
 ---
 
