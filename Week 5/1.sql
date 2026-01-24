@@ -15,7 +15,7 @@ SELECT C.Name, C.Address, A.Employee_ID, A.Work_Date, A.Hours
 FROM client C, assignment A
 WHERE C.Client_ID = A.Client_ID;
 -- 5
-SELECT e.Name, e.Job, e.Salary, d.name AS 'Department Name', s.Skill
+SELECT e.Name, e.Job, e.Salary, d.Name AS 'Department Name', s.Skill
 FROM employee e, employee_skill s, department d
 WHERE e.Employee_ID = s.Employee_ID
     AND e.Department_ID = d.Department_ID
@@ -26,7 +26,7 @@ FROM employee
 WHERE job = (
     SELECT job
     FROM employee
-    WHERE name = 'Yongyut'
+    WHERE Name = 'Yongyut'
 )
     AND Name != 'Yongyut';
 -- 7
